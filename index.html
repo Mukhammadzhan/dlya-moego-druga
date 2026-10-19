@@ -224,7 +224,7 @@
         'Музыка хоть раз проигрывалась: '+(musicHeard?'Да':'Нет'),
         'Нажимала кнопку музыки: '+(musicButtonPressed?'Да':'Нет'),
         'Музыка играла при прощении: '+(musicPlayingNow?'Да':'Нет')
-      ].join('\\n');
+      ].join('\n');
       mailLog('⏳ Отправляем уведомление через Web3Forms...');
       try{
         const response=await fetch('https://api.web3forms.com/submit',{
@@ -242,7 +242,7 @@
             name:'Момиғим — сайт прощения',
             message:isTest
               ? 'Тестовое уведомление. Если письмо пришло, Web3Forms работает.'
-              : s.answer+' 💌 На сайте нажата кнопка прощения.\\n\\n'+interactionStats,
+              : s.answer+' 💌 На сайте нажата кнопка прощения.\n\n'+interactionStats,
             submitted_at:new Date().toLocaleString('ru-RU',{timeZone:'Asia/Almaty'})+' (Астана)',
             website:location.origin+location.pathname,
             botcheck:false
