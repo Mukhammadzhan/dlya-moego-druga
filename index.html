@@ -103,8 +103,9 @@
     const strings={"uz":{"brand":"💌 Фақат сиз учун","title":"Момиғим, мени<br>кечирасизми? 🥺","lead":"Сизга ёзмаганим ва жавоб бермаганим учун кечиринг. Сизни хафа қилиш ниятим йўқ эди. Сиз мен учун жуда қадрлисиз. 💕","yes":"Кечирдим ❤️","no":"Кечирмайман 😤","footer":"Фақат бир табассумингиз ҳам мен учун катта бахт 💗","reactions":["Момиғим, тугма қочиб кетди! 🤭","Момиғим, ҳали ҳам хафамисиз? 🥺","Сизнинг табассумингиз ҳаммасидан қиммат 💗","Бу тугма жуда шўх экан-а! 😄","Момиғим, бир бор кечириб қўйинг 🫶","Қочоқ тугма ўз ишини билади 😂","Сизни хафа қилганимдан афсусдаман 💕","Момиғим, кўнглингизни олишни хоҳлайман 🌷","Қаранг, тугма ҳатто экран четида! 👀","Сизнинг ёзишингизни соғинганман 💌","Момиғим, озгина кулиб қўйинг-чи 😊","Бугун тугмалар ҳам ҳазилкаш 🤭","Сиз мен учун жуда қадрлисиз 💖","Қочиш бўйича чемпион топилди 🏆","Момиғим, менга бир имконият беринг 🌸","Сизнинг кайфиятингиз яхши бўлсин ☀️","Бу тугмани тутиш қийин-а? 😅","Момиғим, гаплашиб олайлик 💞","Сизни кутишга ҳам тайёрман 🥹","Ҳар қочганда, яна бир узр ❤️","Момиғим, дўстлигимиз менга азиз 🫂","Кичкина табассум учун ҳам раҳмат 🌼","Балки бошқа тугмани танларсиз? 👀","Момиғим, сизга кўпроқ вақт ажратаман 💗","Бу тугма тезлик рекордини янгилади ⚡","Мени шунчаки эшитиб қўйинг 🥺","Момиғим, ранжиманг энди 🌹","Дунёда бунча чаққон тугма йўқ 😂","Сизга яна ва яна раҳмат демоқчиман 💌","Момиғим, кечирсангиз, жуда хурсанд бўламан ❤️"],"resultTitle":"Урааа! Мен билардим, мени кечиришингизни! 🎉❤️","resultBody":"Раҳмат, момиғим! Менга жуда кераксиз. ❤️","resultFooter":"Орамизда масофа бўлмаганда, мен сизни пешонангиздан ўпиб қўярдим. 🥹💕","subject":"Ура! У мени кечирди! ❤️","answer":"Кечирдим ❤️","musicLabel":"Мусиқани ёқиш ёки ўчириш"},"ru":{"brand":"💌 Только для тебя","title":"Счастье моё, ты меня<br>простишь? 🥺","lead":"Прости, что долго не писал и не отвечал. Мне жаль, что я тебя расстроил. Ты для меня очень близкий и дорогой человек. 💕","yes":"Я тебя простила ❤️","no":"Не прощу 😤","footer":"Даже одна твоя улыбка делает мой день лучше 💗","reactions":["Счастье моё, кнопка убежала! 🤭","Ты всё ещё обижаешься? 🥺","Твоя улыбка бесценна 💗","Какая шустрая кнопка! 😄","Может, всё-таки простишь? 🫶","Похоже, у кнопки план побега 😂","Мне правда жаль, что я тебя расстроил 💕","Мне хочется поднять тебе настроение 🌷","Уже на другом краю экрана! 👀","Я соскучился по нашим перепискам 💌","Ну улыбнись хоть чуточку 😊","Эта кнопка сегодня шутит 🤭","Ты очень дорога мне 💖","У нас чемпион по побегам! 🏆","Подари мне ещё один шанс 🌸","Пусть у тебя будет хорошее настроение ☀️","Её и правда непросто поймать 😅","Давай поговорим по душам 💞","Я готов немного подождать 🥹","Каждый побег это ещё одно прости ❤️","Наша близость для меня очень важна 🫂","Спасибо даже за маленькую улыбку 🌼","А вторую кнопочку не пробовала? 👀","Постараюсь уделять тебе больше времени 💗","Кнопка ставит рекорды скорости ⚡","Мне важно, чтобы ты меня услышала 🥺","Ну не обижайся больше, пожалуйста 🌹","Самая быстрая кнопка на планете 😂","Хочется ещё раз сказать тебе спасибо 💌","Если простишь, я буду очень рад ❤️"],"resultTitle":"Урааа! Я знал, что ты меня простишь! 🎉❤️","resultBody":"Спасибо, счастье моё! Ты мне очень нужна. ❤️","resultFooter":"Если бы нас не разделяло расстояние, я бы поцеловал тебя в лоб. 🥹💕","subject":"Ура! Она меня простила! ❤️","answer":"Я тебя простила ❤️","musicLabel":"Включить или выключить музыку"}};
     const get=id=>document.getElementById(id);
     const no=get('no'),yes=get('yes'),musicToggle=get('musicToggle'),audio=get('music');
-    let lang='uz', dodges=0,lastDodge=-10000,finished=false,musicEnabled=false;
+    let lang='uz', dodges=0,noAttempts=0,lastDodge=-10000,finished=false,musicEnabled=false,musicButtonPressed=false,musicEverPlayed=false;
     audio.volume=0.63;
+    audio.addEventListener('playing',()=>{musicEverPlayed=true;});
     function refreshMusic(){
       musicToggle.classList.toggle('active',musicEnabled);
       musicToggle.setAttribute('aria-pressed',String(musicEnabled));
@@ -115,6 +116,7 @@
       catch(err){console.warn('Audio requires tap or audio file is missing:',err);musicEnabled=false;refreshMusic();}
     }
     musicToggle.addEventListener('click',async()=>{
+      musicButtonPressed=true;
       if(musicEnabled){audio.pause();musicEnabled=false;refreshMusic();}
       else await playMusic();
     });
@@ -157,17 +159,17 @@
       const reaction=strings[lang].reactions[Math.floor((dodges-1)/3)%30];
       const r=get('reaction');r.textContent=reaction;r.classList.add('visible');
     }
-    no.addEventListener('pointerdown',e=>{e.preventDefault();e.stopPropagation();dodge(e.clientX,e.clientY)});
+    no.addEventListener('pointerdown',e=>{e.preventDefault();e.stopPropagation();noAttempts++;dodge(e.clientX,e.clientY)});
     no.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse')dodge(e.clientX,e.clientY)});
-    no.addEventListener('touchstart',e=>{e.preventDefault();e.stopPropagation();if(!window.PointerEvent&&e.touches[0])dodge(e.touches[0].clientX,e.touches[0].clientY);},{passive:false});
-    no.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();dodge(e.clientX,e.clientY)});
+    no.addEventListener('touchstart',e=>{e.preventDefault();e.stopPropagation();if(!window.PointerEvent&&e.touches[0]){noAttempts++;dodge(e.touches[0].clientX,e.touches[0].clientY);}},{passive:false});
+    no.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();if(!window.PointerEvent && e.detail!==0)noAttempts++;dodge(e.clientX,e.clientY)});
     document.addEventListener('pointermove',e=>{
       if(e.pointerType!=='mouse'||finished)return;
       const b=no.getBoundingClientRect();
       const nx=Math.max(b.left,Math.min(e.clientX,b.right)),ny=Math.max(b.top,Math.min(e.clientY,b.bottom));
       if(Math.hypot(nx-e.clientX,ny-e.clientY)<36)dodge(e.clientX,e.clientY);
     });
-    no.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();dodge(-200,-200);}});
+    no.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();noAttempts++;dodge(-200,-200);}});
     window.addEventListener('resize',()=>{if(!finished && dodges===0)initialNoPosition();});
     window.visualViewport?.addEventListener('resize',()=>{if(!finished && dodges===0)initialNoPosition();});
 
@@ -213,6 +215,16 @@
       if(mailStatus)mailStatus.textContent=message;
     }
     async function sendEmail(s,isTest=false){
+      // Snapshot of this page visit at the moment the forgiveness button was tapped.
+      // Only these playful page interactions are included, not personal device data.
+      const musicPlayingNow=!audio.paused && !audio.ended && !audio.error;
+      const musicHeard=musicEverPlayed||musicPlayingNow;
+      const interactionStats=[
+        'Попыток нажать «Не прощу»: '+noAttempts,
+        'Музыка хоть раз проигрывалась: '+(musicHeard?'Да':'Нет'),
+        'Нажимала кнопку музыки: '+(musicButtonPressed?'Да':'Нет'),
+        'Музыка играла при прощении: '+(musicPlayingNow?'Да':'Нет')
+      ].join('\\n');
       mailLog('⏳ Отправляем уведомление через Web3Forms...');
       try{
         const response=await fetch('https://api.web3forms.com/submit',{
@@ -230,7 +242,7 @@
             name:'Момиғим — сайт прощения',
             message:isTest
               ? 'Тестовое уведомление. Если письмо пришло, Web3Forms работает.'
-              : s.answer+' 💌 На сайте нажата кнопка прощения.',
+              : s.answer+' 💌 На сайте нажата кнопка прощения.\\n\\n'+interactionStats,
             submitted_at:new Date().toLocaleString('ru-RU',{timeZone:'Asia/Almaty'})+' (Астана)',
             website:location.origin+location.pathname,
             botcheck:false
