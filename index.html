@@ -99,7 +99,7 @@
   <audio id="music" src="./dont-worry-be-happy.mp3" preload="auto" loop></audio>
   <div id="confetti" aria-hidden="true"></div>
   <script>
-    const NOTIFY_EMAIL="muhammadabduvohidov1@gmail.com";
+    const FORM_ENDPOINT_KEY="9466293e69371e5e866ead33ad92b34f";
     const strings={"uz":{"brand":"💌 Фақат сиз учун","title":"Момиғим, мени<br>кечирасизми? 🥺","lead":"Сизга ёзмаганим ва жавоб бермаганим учун кечиринг. Сизни хафа қилиш ниятим йўқ эди. Сиз мен учун жуда қадрлисиз. 💕","yes":"Кечирдим ❤️","no":"Кечирмайман 😤","footer":"Фақат бир табассумингиз ҳам мен учун катта бахт 💗","reactions":["Момиғим, тугма қочиб кетди! 🤭","Момиғим, ҳали ҳам хафамисиз? 🥺","Сизнинг табассумингиз ҳаммасидан қиммат 💗","Бу тугма жуда шўх экан-а! 😄","Момиғим, бир бор кечириб қўйинг 🫶","Қочоқ тугма ўз ишини билади 😂","Сизни хафа қилганимдан афсусдаман 💕","Момиғим, кўнглингизни олишни хоҳлайман 🌷","Қаранг, тугма ҳатто экран четида! 👀","Сизнинг ёзишингизни соғинганман 💌","Момиғим, озгина кулиб қўйинг-чи 😊","Бугун тугмалар ҳам ҳазилкаш 🤭","Сиз мен учун жуда қадрлисиз 💖","Қочиш бўйича чемпион топилди 🏆","Момиғим, менга бир имконият беринг 🌸","Сизнинг кайфиятингиз яхши бўлсин ☀️","Бу тугмани тутиш қийин-а? 😅","Момиғим, гаплашиб олайлик 💞","Сизни кутишга ҳам тайёрман 🥹","Ҳар қочганда, яна бир узр ❤️","Момиғим, дўстлигимиз менга азиз 🫂","Кичкина табассум учун ҳам раҳмат 🌼","Балки бошқа тугмани танларсиз? 👀","Момиғим, сизга кўпроқ вақт ажратаман 💗","Бу тугма тезлик рекордини янгилади ⚡","Мени шунчаки эшитиб қўйинг 🥺","Момиғим, ранжиманг энди 🌹","Дунёда бунча чаққон тугма йўқ 😂","Сизга яна ва яна раҳмат демоқчиман 💌","Момиғим, кечирсангиз, жуда хурсанд бўламан ❤️"],"resultTitle":"Урааа! Мен билардим, мени кечиришингизни! 🎉❤️","resultBody":"Раҳмат, момиғим! Менга жуда кераксиз. ❤️","resultFooter":"Орамизда масофа бўлмаганда, мен сизни пешонангиздан ўпиб қўярдим. 🥹💕","subject":"Ура! У мени кечирди! ❤️","answer":"Кечирдим ❤️","musicLabel":"Мусиқани ёқиш ёки ўчириш"},"ru":{"brand":"💌 Только для тебя","title":"Счастье моё, ты меня<br>простишь? 🥺","lead":"Прости, что долго не писал и не отвечал. Мне жаль, что я тебя расстроил. Ты для меня очень близкий и дорогой человек. 💕","yes":"Я тебя простила ❤️","no":"Не прощу 😤","footer":"Даже одна твоя улыбка делает мой день лучше 💗","reactions":["Счастье моё, кнопка убежала! 🤭","Ты всё ещё обижаешься? 🥺","Твоя улыбка бесценна 💗","Какая шустрая кнопка! 😄","Может, всё-таки простишь? 🫶","Похоже, у кнопки план побега 😂","Мне правда жаль, что я тебя расстроил 💕","Мне хочется поднять тебе настроение 🌷","Уже на другом краю экрана! 👀","Я соскучился по нашим перепискам 💌","Ну улыбнись хоть чуточку 😊","Эта кнопка сегодня шутит 🤭","Ты очень дорога мне 💖","У нас чемпион по побегам! 🏆","Подари мне ещё один шанс 🌸","Пусть у тебя будет хорошее настроение ☀️","Её и правда непросто поймать 😅","Давай поговорим по душам 💞","Я готов немного подождать 🥹","Каждый побег это ещё одно прости ❤️","Наша близость для меня очень важна 🫂","Спасибо даже за маленькую улыбку 🌼","А вторую кнопочку не пробовала? 👀","Постараюсь уделять тебе больше времени 💗","Кнопка ставит рекорды скорости ⚡","Мне важно, чтобы ты меня услышала 🥺","Ну не обижайся больше, пожалуйста 🌹","Самая быстрая кнопка на планете 😂","Хочется ещё раз сказать тебе спасибо 💌","Если простишь, я буду очень рад ❤️"],"resultTitle":"Урааа! Я знал, что ты меня простишь! 🎉❤️","resultBody":"Спасибо, счастье моё! Ты мне очень нужна. ❤️","resultFooter":"Если бы нас не разделяло расстояние, я бы поцеловал тебя в лоб. 🥹💕","subject":"Ура! Она меня простила! ❤️","answer":"Я тебя простила ❤️","musicLabel":"Включить или выключить музыку"}};
     const get=id=>document.getElementById(id);
     const no=get('no'),yes=get('yes'),musicToggle=get('musicToggle'),audio=get('music');
@@ -213,11 +213,15 @@
       if(mailStatus)mailStatus.textContent=message;
     }
     async function sendEmail(s,isTest=false){
-      const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),18000);
+      // FormSubmit can take longer than 18 s to respond even after receiving a submission.
+      // Do not cancel in-flight requests; notify the owner in the diagnostic panel instead.
+      const slowTimer=setTimeout(()=>{
+        mailLog('⏳ FormSubmit долго отвечает. Запрос мог уже дойти. Проверь письмо активации FormSubmit в Gmail.');
+      },11000);
       mailLog('Отправляем запрос на FormSubmit...');
       try{
-        const response=await fetch('https://formsubmit.co/ajax/'+encodeURIComponent(NOTIFY_EMAIL),{
-          method:'POST',
+        const response=await fetch('https://formsubmit.co/ajax/'+FORM_ENDPOINT_KEY,{
+          method:'POST',mode:'cors',keepalive:true,
           headers:{'Content-Type':'application/json','Accept':'application/json'},
           body:JSON.stringify({
             _subject:isTest?'ТЕСТ — проверка писем с сайта':s.subject,
@@ -225,20 +229,19 @@
             when:new Date().toLocaleString('ru-RU',{timeZone:'Asia/Almaty'})+' (Астана)',
             _url:location.origin+location.pathname,
             _template:'table',_captcha:'false'
-          }),
-          signal:controller.signal
+          })
         });
         const result=await response.json();
         if(!response.ok || (result.success!==true&&result.success!=='true')){
           throw new Error(result.message||('HTTP '+response.status));
         }
-        mailLog('✅ FormSubmit подтвердил запрос. Проверь почту, в том числе Спам.');
+        mailLog('✅ FormSubmit принял запрос. Проверь входящие и папку Спам.');
         return true;
       }catch(err){
-        mailLog('❌ '+(err?.message||String(err)));
-        console.warn('Email notification not confirmed:',err);
+        mailLog('⚠️ Нет подтверждения от FormSubmit: '+(err?.message||String(err))+'. Проверь входящие и активацию.');
+        console.warn('FormSubmit response missing:',err);
         return false;
-      }finally{clearTimeout(timer)}
+      }finally{clearTimeout(slowTimer)}
     }
     if(mailDiagnostics){
       const debug=document.createElement('aside');
